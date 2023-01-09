@@ -28,7 +28,6 @@ function updateOutput() {
   }
 }
 updateOutput();
-
 form.addEventListener('submit', evt => {
   evt.preventDefault();
   const submitStorage = JSON.parse(localStorage.getItem('feedback-form-state'));
