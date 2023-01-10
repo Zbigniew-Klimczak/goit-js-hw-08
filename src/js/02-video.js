@@ -9,11 +9,8 @@ player.on(
   }, 1000)
 );
 const lastTime = localStorage.getItem('videoplayer-current-time');
-player.setCurrentTime(lastTime).catch(error => {
-  switch (error.name) {
-    case 'RangeError':
-      break;
-    default:
-      break;
-  }
-});
+if (lastTime !== null) {
+  player.setCurrentTime(lastTime);
+} else {
+  player.setCurrentTime(0);
+}
