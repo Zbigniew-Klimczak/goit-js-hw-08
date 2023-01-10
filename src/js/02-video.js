@@ -11,6 +11,4 @@ player.on(
 const lastTime = localStorage.getItem('videoplayer-current-time');
 if (lastTime !== null) {
   player.setCurrentTime(lastTime);
-} else {
-  player.setCurrentTime(0);
 }
